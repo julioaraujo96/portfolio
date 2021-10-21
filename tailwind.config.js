@@ -1,10 +1,20 @@
-module.exports = {
+module.exports = 
+{
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
+  theme: 
+  {
+    extend:
+     {
+        colors:
+        {
+          primary: "#0984e3",
+          secondary:"#2d3436"
+        }
+     },
   },
-  variants: {
+  variants: 
+  {
     extend: {},
   },
   plugins: [],

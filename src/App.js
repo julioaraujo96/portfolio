@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Header/Navbar';
 import './App.module.css';
 
 function App() {
