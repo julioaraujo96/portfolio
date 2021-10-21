@@ -1,4 +1,5 @@
 import React from 'react'
+import GithubLogo from '../../UI/Logo/Github/GithubLogo';
 import Logo from '../../UI/Logo/Logo';
 
 const Navbar = () => 
@@ -11,7 +12,7 @@ const Navbar = () =>
                             <Logo />
 
                             {/* Navegação Primária */}
-                         <div class="hidden md:flex items-center space-x-1">
+                         <div className="hidden md:flex items-center space-x-1">
                                 <a href="#" className="py-4 px-2 text-primary border-b-4 border-primary font-semibold ">
                                     Home
                                 </a>
@@ -22,7 +23,7 @@ const Navbar = () =>
 
                             {/* Navegação Secundária */}
                         <div className="hidden md:flex items-center space-x-3 ">
-                            
+                            <GithubLogo/>
                         </div>
                     </div>
                 </div>
