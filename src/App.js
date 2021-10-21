@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar/Navbar';
-import './App.module.scss';
+import './App.module.css';
 
 function App() {
   return (
