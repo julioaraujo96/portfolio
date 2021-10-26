@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Logo from "../../UI/Logo/logo.png";
+import Logo from "../../UI/Logo/logo.svg";
 import GithubLogo from '../../UI/Github/GithubLogo'
 import Darkmode from "../../UI/Darkmode/Darkmode";
+import GitLogo from '../../assets/github.svg';
+
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -100,7 +102,7 @@ const Navbar = () => {
         >
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a
                   href="#"
                   className=" hover:bg-gray-200 text-secondary block px-3 py-2 rounded-md text-base font-medium hover:text-primary"
@@ -113,6 +115,21 @@ const Navbar = () => {
                   className="text-secondary hover:bg-gray-200 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Projects
+                </a>
+                <a
+                  href="https://github.com/julioaraujo96"
+                  target="_blank"
+                  className="text-secondary hover:bg-gray-200 block px-3 py-2 rounded-md"
+                >
+                  <img src={GitLogo} alt="My github" className="mx-auto"/>
+                </a>
+                <a
+                  href="#"
+                  className="text-secondary hover:bg-gray-200 block px-3 py-2 rounded-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
                 </a>
               </div>
             </div>
