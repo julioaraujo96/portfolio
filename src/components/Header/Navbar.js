@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Logo from "../../UI/Logo/logo.svg";
+import Logo from "../../assets/logo.svg";
 import GithubLogo from '../../UI/Github/GithubLogo'
 import Darkmode from "../../UI/Darkmode/Darkmode";
 import GitLogo from '../../assets/github.svg';
