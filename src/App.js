@@ -9,7 +9,7 @@ import './App.module.css';
 
 function App() {
   return (
-    <>
+    <div className="font-mono dark:bg-secondary transition duration-500">
     <Helmet>
         <meta name="description" content="Personal Portfolio"/>
         <title>Júlio Araújo - Homepage</title>
@@ -25,7 +25,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </>
+    </div>
   );
 }
 

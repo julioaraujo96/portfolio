@@ -4,14 +4,16 @@
   import Darkmode from "../../UI/Darkmode/Darkmode";
   import Logo from "../../assets/logo.svg";
   import GithubLogo from '../../UI/Github/GithubLogo';
+  import useDarkmode from '../../hook/useDarkmode';
 
   const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [colorTheme, setTheme] = useDarkmode();
 
     return (
       <>
-        <nav className="bg-white border-b-2 dark:bg-secondary transition duration-500">
+        <nav className="bg-white border-b-2 dark:border-primary dark:bg-secondary transition duration-500">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
@@ -24,17 +26,12 @@
                 </div>
                 <div className="hidden md:block">
                   <ul className="ml-10 flex items-baseline space-x-4">
-                    <li
-                      className=" hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      <Link to="/">Home</Link>
-                    </li>
-
-                    <li
-                      className="text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-500 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      <Link to="/projects">Projects</Link>
-                    </li>
+                      <Link to="/" className="text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-500 px-3 py-2 rounded-md text-sm font-medium">
+                         Home
+                      </Link>
+                      <Link to="/projects" className="text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-500 px-3 py-2 rounded-md text-sm font-medium">
+                        Projects
+                      </Link>
                   </ul>
                 </div>
               </div>
@@ -101,17 +98,12 @@
             {(ref) => (
               <div className="md:hidden" id="mobile-menu">
                 <ul ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                  <li
-                    className=" cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white"
-                  >
-                    <Link to="/">Home</Link>
-                  </li>
-
-                  <li
-                    className=" cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white"
-                  >
-                    <Link to="/projects">Projects</Link>
-                  </li>
+                    <Link to="/" className="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white">
+                      Home
+                    </Link>
+                    <Link to="/projects" className="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white">
+                      Projects
+                    </Link>
                   <a href="https://github.com/julioaraujo96" target="_blank" rel="noreferrer" className="px-2 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-500 transition duration-300 flex items-center content-center justify-center">
                     <svg width="20px" height="20px" viewBox="0 0 256 250" version="1.1" preserveAspectRatio="xMidYMid" className="fill-current text-black dark:text-white cursor-pointer">
                        <g>
@@ -119,8 +111,7 @@
                        </g>
                     </svg>
                   </a>
-                  <li
-                    href="#"
+                  <li onClick={()=> setTheme(colorTheme)}
                     className="cursor-pointer text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-500 block px-3 py-2 rounded-md"
                   >
                     <Darkmode />
