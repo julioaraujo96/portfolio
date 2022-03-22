@@ -40,7 +40,7 @@ const Navbar = () => {
                 <a href="https://github.com/julioaraujo96" target="_blank" rel="noreferrer" >
                   <BsGithub className="text-white hover:text-black "/>
                 </a>
-                <a href="https://github.com/julioaraujo96" target="_blank" rel="noreferrer" >
+                <a href="https://www.linkedin.com/in/júlio-araújo-ba3441235/" target="_blank" rel="noreferrer" >
                   <BsLinkedin className="text-white hover:text-primary"/>
                 </a>
                 <Darkmode />
