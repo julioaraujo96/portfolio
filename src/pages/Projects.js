@@ -2,16 +2,20 @@ import React, { useEffect,useState } from "react";
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import ProjectCard from '../components/projectCard/projectCard'
+import Spinner from '../components/Spinner/Spinner'
 
 const Projects = () => {
 
   const [data, setData] = useState();
+  const [loading, setLoading] = useState(false);
 
 useEffect(()=>{
   async function fetchData() {
-
+    setLoading(true);
      await axios.get('http://julioaraujo96.pythonanywhere.com/projects')
     .then(function (response) {
+      
+      setLoading(false);
       setData(response.data)
     })
     .catch(function (error) {
@@ -46,7 +50,7 @@ if (data) {
 
     <section className="container mx-auto max-w-4xl mb-4">
       <div className="bg-gray-300 dark:bg-terciary rounded shadow mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center">
-        {output}
+       { loading ? <Spinner /> : output }
       </div>
     </section>
 </>
