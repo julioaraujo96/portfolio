@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Switch, Route}  from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects'
-import './App.module.css';
 
 function App() {
   return (
