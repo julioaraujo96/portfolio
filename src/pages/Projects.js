@@ -12,7 +12,7 @@ const Projects = () => {
 useEffect(()=>{
   async function fetchData() {
     setLoading(true);
-     await axios.get(`${process.env.API_URL}`)
+     await axios.get("https://julioaraujo96.pythonanywhere.com/projects"`)
     .then(function (response) {
       
       setLoading(false);
