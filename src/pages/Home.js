@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter'
 import {Link}  from 'react-router-dom';
-import {BsLinkedin} from 'react-icons/bs'
 
 const Home = () => {
     return (
@@ -34,8 +33,8 @@ const Home = () => {
             </div>
 
             <div className="flex justify-center gap-4 mt-32">
-            <a  href="https://www.linkedin.com/in/júlio-araújo-ba3441235/" target="_blank" rel="noreferrer" class="flex items-center gap-1 bg-transparent hover:bg-gray-500 text-gray-500 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">
-                 Linked<BsLinkedin className="text-primary"/>
+            <a  href="/projects" rel="noreferrer" className="flex items-center gap-1 bg-transparent hover:bg-gray-500 text-gray-500 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">
+                 Projects
             </a>
             <Link to="/files/cv.pdf" target="_blank" download class="bg-primary hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded shadow">Download CV</Link>
             </div>

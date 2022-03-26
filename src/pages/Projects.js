@@ -1,10 +1,56 @@
-import React from 'react';
+import React, { useEffect,useState } from "react";
+import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import ProjectCard from '../components/projectCard/projectCard'
 
 const Projects = () => {
-    return (
-        <section className="container h-screen mx-auto">
-        </section>
-    );
+
+  const [data, setData] = useState();
+
+useEffect(()=>{
+  async function fetchData() {
+
+     await axios.get('http://julioaraujo96.pythonanywhere.com/projects')
+    .then(function (response) {
+      setData(response.data)
+    })
+    .catch(function (error) {
+      throw Error(error.message);
+    })
+  }
+  fetchData();
+},[]);
+
+let output;
+
+
+if (data) {
+ output = data['projects'].map((project) =>(<ProjectCard 
+  
+  key={project.id}
+  title={project['name']} 
+  description={project['description']} 
+  images={project['images']}
+  topics={project['topics']}
+  url={project['url']}
+  />))
+}
+
+
+  return (
+ <>
+    <Helmet>
+        <meta name="description" content="Personal Portfolio" />
+        <title>Júlio Araújo - Projects</title>
+    </Helmet>
+
+    <section className="container mx-auto max-w-4xl mb-4">
+      <div className="bg-gray-300 dark:bg-terciary rounded shadow mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center">
+        {output}
+      </div>
+    </section>
+</>
+  );
 };
 
 export default Projects;
