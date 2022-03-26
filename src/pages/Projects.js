@@ -49,7 +49,7 @@ if (data) {
     </Helmet>
 
     <section className="container mx-auto max-w-4xl mb-4">
-      <div className="bg-gray-300 dark:bg-terciary rounded shadow mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center">
+      <div className="bg-gray-300 dark:bg-terciary rounded shadow mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center gap-4">
        { loading ? <Spinner /> : output }
       </div>
     </section>
