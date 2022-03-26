@@ -11,6 +11,9 @@ module.exports =
           primary: "#0984e3",
           secondary:"#2E3440",
           terciary: "#4C566A", 
+        },
+        fontFamily: {
+          'uimono': ['Roboto Mono,ui-monospace', 'SFMono-Regular'],
         }
      },
   },
