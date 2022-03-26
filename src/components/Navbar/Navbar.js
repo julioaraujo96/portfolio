@@ -36,12 +36,12 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            <div class="hidden md:flex items-center space-x-3 text-lg">
+            <div className="hidden md:flex items-center space-x-3 text-lg">
                 <a href="https://github.com/julioaraujo96" target="_blank" rel="noreferrer" >
-                  <BsGithub className="text-white hover:text-black "/>
+                  <BsGithub className="text-black hover:opacity-80 dark:text-white dark:hover:text-black "/>
                 </a>
                 <a href="https://www.linkedin.com/in/júlio-araújo-ba3441235/" target="_blank" rel="noreferrer" >
-                  <BsLinkedin className="text-white hover:text-primary"/>
+                  <BsLinkedin className="text-primary hover:opacity-80 dark:text-white dark:hover:text-primary"/>
                 </a>
                 <Darkmode />
             </div>
