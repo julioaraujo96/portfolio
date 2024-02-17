@@ -1,3 +1,3 @@
 # personal website
 
-Visit at: https://portfolio-three-pi-67.vercel.app/
+Visit at: https://julioaraujo.vercel.app/projects
