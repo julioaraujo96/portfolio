@@ -12,9 +12,13 @@
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    text-align: center;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
   }
   
   .container:hover .overlay {

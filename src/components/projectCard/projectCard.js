@@ -10,14 +10,14 @@ const projectCard = (props) => {
 
     return (
         <figure className={styles.container}>
-              <img src={props.images[0]} alt="shoe shop" className="relative"/>  
+              <img src={props.images[0]} alt={props.title} className="relative"/>  
               <figcaption className={styles.overlay}>
                <a href={props.url} target="_blank" rel="noopener noreferrer">
-               <h1 className="underline font-bold">
+               <h1 className="underline font-bold text-center">
                   {props.title}
                 </h1>
                </a>
-                <p>{props.description}</p>
+                <p className=' text-xs md:text-base '>{props.description}</p>
                 <div className="flex justify-center gap-2 mt-2">
                  {tags}
                 </div>
