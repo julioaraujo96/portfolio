@@ -23,13 +23,13 @@ const Navbar = () => {
                 <ul className='ml-10 flex items-baseline space-x-4'>
                   <Link
                     to='/'
-                    className='text-teal dark:text-white hover:bg-blue-800 dark:hover:bg-gray-500 px-3 py-2 rounded-md text-sm font-medium'
+                    className='text-teal dark:text-white hover:bg-blue-800 dark:hover:bg-primary px-3 py-2 rounded-md text-sm font-medium'
                   >
                     Home
                   </Link>
                   <Link
                     to='/projects'
-                    className=' text-teal dark:text-white hover:bg-blue-800 dark:hover:bg-gray-500 px-3 py-2 rounded-md text-sm font-medium'
+                    className=' text-teal dark:text-white hover:bg-blue-800 dark:hover:bg-primary px-3 py-2 rounded-md text-sm font-medium'
                   >
                     Projects
                   </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type='button'
-                className='bg-white dark:bg-secondary inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary dark:hover:bg-primary '
+                className='bg-primary dark:bg-secondary inline-flex items-center justify-center p-2 rounded-md text-teal hover:text-white hover:bg-primary dark:hover:bg-primary '
                 aria-controls='mobile-menu'
                 aria-expanded='false'
               >
@@ -117,13 +117,13 @@ const Navbar = () => {
               >
                 <Link
                   to='/'
-                  className='cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white'
+                  className='cursor-pointer hover:bg-primary dark:hover:bg-primary text-teal dark:text-white block px-3 py-2 rounded-md text-base font-medium  dark:hover:text-white'
                 >
                   Home
                 </Link>
                 <Link
                   to='/projects'
-                  className='cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 text-secondary dark:text-primary block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-white'
+                  className='cursor-pointer hover:bg-primary dark:hover:bg-primary text-teal dark:text-white block px-3 py-2 rounded-md text-base font-medium  dark:hover:text-white'
                 >
                   Projects
                 </Link>
@@ -132,7 +132,10 @@ const Navbar = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <p className='text-primary'> Github</p>
+                  <p className='text-teal hover:bg-primary dark:text-white dark:hover:text-white block px-3 py-2 rounded-md'>
+                    {' '}
+                    Github
+                  </p>
                 </a>
                 <a
                   href='https://www.linkedin.com/in/júlio-araújo-ba3441235/'
@@ -140,11 +143,13 @@ const Navbar = () => {
                   rel='noreferrer'
                   className='flex'
                 >
-                  <p className='text-primary'> LinkedIn</p>
+                  <p className='text-teal hover:bg-primary dark:text-white dark:hover:text-white block px-3 py-2 rounded-md'>
+                    LinkedIn
+                  </p>
                 </a>
                 <li
                   onClick={() => setTheme(colorTheme)}
-                  className='cursor-pointer text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-500 block px-3 py-2 rounded-md'
+                  className='cursor-pointer text-teal dark:text-white hover:bg-primary dark:hover:bg-gray-500 block px-3 py-2 rounded-md'
                 >
                   <Darkmode />
                 </li>
